@@ -3686,16 +3686,8 @@ body.edition-v13 .hero-poster.hero-video-panel,
 </style>
 <script id="v18-6-video-on-main-screen-script">
 (()=>{
-  const player=document.querySelector('.poster-hero .hero-video-panel iframe');
   const oldButton=document.querySelector('.poster-hero .heroplay');
-  if(!player||!oldButton)return;
-  const link=document.createElement('a');
-  link.className='heroplay';
-  link.href='https://www.youtube.com/watch?v=2mhanW2kSLM';
-  link.target='_blank';
-  link.rel='noopener';
-  link.innerHTML='<span>↗</span> Открыть в YouTube';
-  oldButton.replaceWith(link);
+  if(oldButton) oldButton.remove();
 })();
 </script>
 
@@ -3803,6 +3795,146 @@ body.edition-v13 .hero-poster.hero-video-panel,
 <style id="v18-19-library-title-single-line">
 .history-list-head{display:block!important;margin:46px 0 22px!important}.history-list-head h3{display:block!important;width:100%!important;white-space:nowrap!important;font-size:clamp(16px,4vw,48px)!important;line-height:1.08!important;letter-spacing:-.065em!important}.history-list-head p{max-width:720px!important;margin:16px 0 0!important}@media(max-width:560px){.history-list-head{margin-top:34px!important}.history-list-head h3{font-size:clamp(16px,4.75vw,24px)!important;letter-spacing:-.075em!important}.history-list-head p{margin-top:12px!important}}
 </style>
+
+<style id="v18-22-mobile-full-host-portraits">
+/* Mobile presenter portraits: show every square source portrait in full,
+   at one consistent scale, without slicing heads, shoulders or faces. */
+@media (max-width:700px){
+  #authors .broadcast-console{
+    grid-template-columns:minmax(0,1fr)!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    gap:0!important;
+    align-items:start!important;
+  }
+  #authors .broadcast-arrow{display:none!important}
+  #authors .broadcast-rail{
+    display:flex!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    gap:10px!important;
+    align-items:flex-start!important;
+    padding:2px 1px 12px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    scroll-snap-type:x mandatory!important;
+    scroll-padding-left:1px!important;
+    -webkit-overflow-scrolling:touch!important;
+  }
+  #authors .broadcast-thumb{
+    display:grid!important;
+    grid-template-rows:132px minmax(50px,auto)!important;
+    flex:0 0 132px!important;
+    width:132px!important;
+    min-width:132px!important;
+    max-width:132px!important;
+    height:auto!important;
+    min-height:182px!important;
+    padding:0!important;
+    overflow:hidden!important;
+    scroll-snap-align:start!important;
+    background:#fff!important;
+    border:2px solid transparent!important;
+    box-sizing:border-box!important;
+    transform:none!important;
+  }
+  #authors .broadcast-thumb img{
+    display:block!important;
+    width:100%!important;
+    height:132px!important;
+    min-height:132px!important;
+    max-height:132px!important;
+    aspect-ratio:1/1!important;
+    object-fit:contain!important;
+    object-position:50% 50%!important;
+    padding:0!important;
+    margin:0!important;
+    background:#eef1f4!important;
+    filter:saturate(.88)!important;
+    transform:none!important;
+  }
+  #authors .broadcast-thumb.active img{
+    filter:saturate(1)!important;
+    transform:none!important;
+  }
+  #authors .broadcast-thumb .broadcast-thumb-caption{
+    position:static!important;
+    inset:auto!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    align-items:flex-start!important;
+    min-height:50px!important;
+    padding:7px 8px 8px!important;
+    background:#fff!important;
+    color:#172b49!important;
+    overflow:visible!important;
+    box-sizing:border-box!important;
+  }
+  #authors .broadcast-thumb .broadcast-thumb-caption b{
+    display:block!important;
+    width:100%!important;
+    color:#172b49!important;
+    font:800 9.5px/1.12 var(--mono)!important;
+    white-space:normal!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+  }
+  #authors .broadcast-thumb .broadcast-thumb-caption small{
+    display:block!important;
+    width:100%!important;
+    margin-top:4px!important;
+    color:#68788a!important;
+    font:700 8px/1.1 var(--mono)!important;
+    white-space:normal!important;
+  }
+
+  /* The large selected presenter also remains fully visible. */
+  #authors .broadcast-portrait{
+    background:#0a2139!important;
+  }
+  #authors .broadcast-portrait img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    object-position:50% 50%!important;
+    transform:none!important;
+  }
+  #authors .broadcast-stage.is-changing .broadcast-portrait img{
+    transform:none!important;
+  }
+
+  /* Safe fallback cards if the broadcast rail has not initialised yet. */
+  #authors .peoplegrid .host-card img{
+    width:min(180px,100%)!important;
+    height:auto!important;
+    aspect-ratio:1/1!important;
+    object-fit:contain!important;
+    object-position:50% 50%!important;
+    border-radius:14px!important;
+    transform:none!important;
+  }
+}
+@media (max-width:390px){
+  #authors .broadcast-rail{gap:9px!important}
+  #authors .broadcast-thumb{
+    grid-template-rows:124px minmax(50px,auto)!important;
+    flex-basis:124px!important;
+    width:124px!important;
+    min-width:124px!important;
+    max-width:124px!important;
+    min-height:174px!important;
+  }
+  #authors .broadcast-thumb img{
+    height:124px!important;
+    min-height:124px!important;
+    max-height:124px!important;
+  }
+}
+</style>
+
 </body></html>
 
 <style id="v18-7-mobile-authors-redesign">
@@ -4467,3 +4599,487 @@ body.edition-v13 .hero-poster.hero-video-panel,
   96%,100%{opacity:1;transform:scale(1);filter:blur(0) grayscale(0) brightness(1)}
 }
 </style>
+
+<style id="v18-22-mobile-broadcast-rail-final-fix">
+/* Final mobile rail repair: hidden arrows must not leave three grid columns. */
+@media (max-width:600px){
+  #authors .broadcast-console{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    width:100%!important;
+    height:154px!important;
+    gap:0!important;
+    overflow:visible!important;
+  }
+  #authors .broadcast-arrow{
+    display:none!important;
+  }
+  #authors .broadcast-rail{
+    grid-column:1/-1!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    display:flex!important;
+    gap:9px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    padding:1px 1px 6px!important;
+    scroll-snap-type:x proximity!important;
+    scrollbar-width:thin!important;
+    scrollbar-color:#173e70 #dfe5eb!important;
+  }
+  #authors .broadcast-thumb{
+    flex:0 0 132px!important;
+    width:132px!important;
+    min-width:132px!important;
+    max-width:132px!important;
+    height:152px!important;
+    grid-template-rows:104px 46px!important;
+    scroll-snap-align:start!important;
+  }
+  #authors .broadcast-thumb img{
+    width:100%!important;
+    height:104px!important;
+  }
+}
+@media (max-width:380px){
+  #authors .broadcast-thumb{
+    flex-basis:124px!important;
+    width:124px!important;
+    min-width:124px!important;
+    max-width:124px!important;
+  }
+}
+</style>
+
+
+<style id="v18-23-mobile-host-portraits-absolute-final">
+/* Absolute final mobile portrait geometry. Placed after every earlier style block. */
+@media (max-width:700px){
+  #authors .broadcast-console{
+    display:grid!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    gap:0!important;
+    align-items:start!important;
+    overflow:visible!important;
+  }
+  #authors .broadcast-arrow{display:none!important}
+  #authors .broadcast-rail{
+    grid-column:1/-1!important;
+    display:flex!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    gap:10px!important;
+    align-items:flex-start!important;
+    padding:2px 1px 12px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    scroll-snap-type:x mandatory!important;
+    scroll-padding-left:1px!important;
+    -webkit-overflow-scrolling:touch!important;
+  }
+  #authors .broadcast-thumb{
+    display:grid!important;
+    grid-template-rows:132px minmax(50px,auto)!important;
+    flex:0 0 132px!important;
+    width:132px!important;
+    min-width:132px!important;
+    max-width:132px!important;
+    height:auto!important;
+    min-height:182px!important;
+    padding:0!important;
+    overflow:hidden!important;
+    scroll-snap-align:start!important;
+    background:#fff!important;
+    border:2px solid transparent!important;
+    box-sizing:border-box!important;
+    transform:none!important;
+  }
+  #authors .broadcast-thumb img{
+    display:block!important;
+    width:100%!important;
+    height:132px!important;
+    min-height:132px!important;
+    max-height:132px!important;
+    aspect-ratio:1/1!important;
+    object-fit:contain!important;
+    object-position:50% 50%!important;
+    padding:0!important;
+    margin:0!important;
+    background:#eef1f4!important;
+    filter:saturate(.88)!important;
+    transform:none!important;
+  }
+  #authors .broadcast-thumb.active img{
+    filter:saturate(1)!important;
+    transform:none!important;
+  }
+  #authors .broadcast-thumb .broadcast-thumb-caption{
+    position:static!important;
+    inset:auto!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    align-items:flex-start!important;
+    min-height:50px!important;
+    padding:7px 8px 8px!important;
+    background:#fff!important;
+    color:#172b49!important;
+    overflow:visible!important;
+    box-sizing:border-box!important;
+  }
+  #authors .broadcast-thumb .broadcast-thumb-caption b{
+    display:block!important;
+    width:100%!important;
+    color:#172b49!important;
+    font:800 9.5px/1.12 var(--mono)!important;
+    white-space:normal!important;
+    overflow-wrap:normal!important;
+    word-break:normal!important;
+  }
+  #authors .broadcast-thumb .broadcast-thumb-caption small{
+    display:block!important;
+    width:100%!important;
+    margin-top:4px!important;
+    color:#68788a!important;
+    font:700 8px/1.1 var(--mono)!important;
+    white-space:normal!important;
+  }
+  #authors .broadcast-portrait{
+    background:#0a2139!important;
+  }
+  #authors .broadcast-portrait img{
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    object-position:50% 50%!important;
+    transform:none!important;
+  }
+  #authors .broadcast-stage.is-changing .broadcast-portrait img{
+    transform:none!important;
+  }
+  #authors .peoplegrid .host-card img{
+    width:min(180px,100%)!important;
+    height:auto!important;
+    aspect-ratio:1/1!important;
+    object-fit:contain!important;
+    object-position:50% 50%!important;
+    border-radius:14px!important;
+    transform:none!important;
+  }
+}
+@media (max-width:390px){
+  #authors .broadcast-rail{gap:9px!important}
+  #authors .broadcast-thumb{
+    grid-template-rows:124px minmax(50px,auto)!important;
+    flex-basis:124px!important;
+    width:124px!important;
+    min-width:124px!important;
+    max-width:124px!important;
+    min-height:174px!important;
+  }
+  #authors .broadcast-thumb img{
+    height:124px!important;
+    min-height:124px!important;
+    max-height:124px!important;
+  }
+}
+</style>
+
+
+<style id="v18-24-mobile-hosts-real-rebuild">
+/* Mobile presenter rebuild: the portrait and the text are separate blocks.
+   This fixes the real visible carousel, not the hidden source cards. */
+@media (max-width:700px){
+  #authors .broadcast-hosts{
+    width:100%!important;
+    margin:10px 0 38px!important;
+  }
+
+  #authors .broadcast-stage{
+    position:relative!important;
+    display:flex!important;
+    flex-direction:column!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    overflow:hidden!important;
+    background:#071a2e!important;
+  }
+
+  /* A true square portrait frame. Nothing is placed over the face. */
+  #authors .broadcast-portrait{
+    position:relative!important;
+    inset:auto!important;
+    display:block!important;
+    flex:0 0 auto!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    aspect-ratio:1/1!important;
+    overflow:hidden!important;
+    background:#dfe5eb!important;
+  }
+  #authors .broadcast-portrait:before{
+    content:''!important;
+    position:absolute!important;
+    z-index:0!important;
+    inset:-22px!important;
+    background-image:linear-gradient(rgba(7,26,46,.18),rgba(7,26,46,.18)),var(--portrait-image)!important;
+    background-size:cover!important;
+    background-position:center!important;
+    filter:blur(18px) saturate(.85)!important;
+    transform:scale(1.08)!important;
+    opacity:.58!important;
+  }
+  #authors .broadcast-portrait:after{
+    content:''!important;
+    position:absolute!important;
+    z-index:2!important;
+    inset:0!important;
+    background:linear-gradient(90deg,rgba(7,26,46,.08),transparent 18%,transparent 82%,rgba(7,26,46,.08))!important;
+    pointer-events:none!important;
+  }
+  #authors .broadcast-portrait img{
+    position:relative!important;
+    z-index:1!important;
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:50% 50%!important;
+    padding:0!important;
+    margin:0!important;
+    transform:none!important;
+    filter:none!important;
+  }
+  #authors .broadcast-stage.is-changing .broadcast-portrait img{
+    opacity:.35!important;
+    filter:blur(2px)!important;
+    transform:none!important;
+  }
+  #authors .broadcast-on-air{
+    z-index:4!important;
+    left:10px!important;
+    top:10px!important;
+  }
+
+  /* Text now lives below the portrait, so it cannot cut the chin or shoulders. */
+  #authors .broadcast-copy{
+    position:relative!important;
+    z-index:4!important;
+    inset:auto!important;
+    display:block!important;
+    flex:0 0 auto!important;
+    width:100%!important;
+    min-height:0!important;
+    padding:17px 16px 20px!important;
+    background:linear-gradient(145deg,#0b2744,#071829)!important;
+    color:#fff!important;
+  }
+  #authors .broadcast-copy:after{display:none!important}
+  #authors .broadcast-copy .broadcast-lower-third{
+    position:static!important;
+    display:flex!important;
+    width:100%!important;
+    max-width:none!important;
+    margin:0 0 13px!important;
+    filter:none!important;
+  }
+  #authors .broadcast-copy .broadcast-lower-text{
+    width:100%!important;
+    padding:0 0 0 11px!important;
+    background:transparent!important;
+  }
+  #authors .broadcast-copy .broadcast-lower-text b{
+    font-size:23px!important;
+    line-height:1!important;
+  }
+  #authors .broadcast-copy .broadcast-lower-text span{
+    margin-top:5px!important;
+    font-size:7.5px!important;
+  }
+  #authors .broadcast-kicker{
+    display:block!important;
+    font-size:0!important;
+  }
+  #authors .broadcast-kicker:after{
+    content:'Темы эфиров'!important;
+    font:800 8px/1.4 var(--mono)!important;
+    letter-spacing:.13em!important;
+    text-transform:uppercase!important;
+  }
+  #authors .broadcast-program{
+    display:block!important;
+    margin:7px 0 7px!important;
+    color:#fff!important;
+    font-size:27px!important;
+    line-height:1!important;
+    overflow:visible!important;
+    -webkit-line-clamp:unset!important;
+  }
+  #authors .broadcast-role{
+    display:block!important;
+    margin:0!important;
+    color:#dce7f0!important;
+    font-size:12px!important;
+    line-height:1.38!important;
+    overflow:visible!important;
+    -webkit-line-clamp:unset!important;
+  }
+  #authors .broadcast-description,
+  #authors .broadcast-count{display:none!important}
+  #authors .broadcast-progress{
+    position:absolute!important;
+    left:0!important;
+    right:0!important;
+    bottom:0!important;
+    z-index:6!important;
+  }
+
+  /* Full-width rail with identical square portrait windows. */
+  #authors .broadcast-console{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    margin-top:9px!important;
+    overflow:visible!important;
+  }
+  #authors .broadcast-arrow{display:none!important}
+  #authors .broadcast-rail{
+    display:flex!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    gap:10px!important;
+    align-items:flex-start!important;
+    padding:2px 1px 12px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    scroll-snap-type:x mandatory!important;
+    -webkit-overflow-scrolling:touch!important;
+  }
+  #authors .broadcast-thumb{
+    display:grid!important;
+    grid-template-rows:136px minmax(54px,auto)!important;
+    flex:0 0 136px!important;
+    width:136px!important;
+    min-width:136px!important;
+    max-width:136px!important;
+    height:auto!important;
+    min-height:190px!important;
+    padding:0!important;
+    overflow:hidden!important;
+    box-sizing:border-box!important;
+    scroll-snap-align:start!important;
+    background:#fff!important;
+    border:2px solid transparent!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+  #authors .broadcast-thumb.active{
+    border-color:#d8263c!important;
+  }
+  #authors .broadcast-thumb img{
+    display:block!important;
+    width:100%!important;
+    height:136px!important;
+    min-height:136px!important;
+    max-height:136px!important;
+    aspect-ratio:1/1!important;
+    object-fit:contain!important;
+    object-position:50% 50%!important;
+    box-sizing:border-box!important;
+    padding:4px!important;
+    margin:0!important;
+    background:#edf1f4!important;
+    filter:none!important;
+    transform:none!important;
+  }
+  #authors .broadcast-thumb.active img{
+    filter:none!important;
+    transform:none!important;
+  }
+  #authors .broadcast-thumb .broadcast-thumb-caption{
+    position:static!important;
+    inset:auto!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:center!important;
+    align-items:flex-start!important;
+    min-height:54px!important;
+    padding:7px 8px 8px!important;
+    background:#fff!important;
+    color:#172b49!important;
+    overflow:visible!important;
+  }
+  #authors .broadcast-thumb .broadcast-thumb-caption b{
+    display:block!important;
+    width:100%!important;
+    color:#172b49!important;
+    font:800 9.5px/1.14 var(--mono)!important;
+    white-space:normal!important;
+    word-break:normal!important;
+    overflow-wrap:normal!important;
+  }
+  #authors .broadcast-thumb .broadcast-thumb-caption small{
+    display:block!important;
+    width:100%!important;
+    margin-top:4px!important;
+    color:#68788a!important;
+    font:700 8px/1.1 var(--mono)!important;
+    white-space:normal!important;
+  }
+}
+
+@media (max-width:390px){
+  #authors .broadcast-thumb{
+    grid-template-rows:126px minmax(54px,auto)!important;
+    flex-basis:126px!important;
+    width:126px!important;
+    min-width:126px!important;
+    max-width:126px!important;
+    min-height:180px!important;
+  }
+  #authors .broadcast-thumb img{
+    height:126px!important;
+    min-height:126px!important;
+    max-height:126px!important;
+  }
+}
+</style>
+<style id="v18-25-mobile-founder-fuller-text">
+/* Mobile founder card: fuller text about Nurislam instead of a single line. */
+@media (max-width:680px){
+  #authors .editorial-team .founder-card .mobile-editorial-summary{
+    font-size:11.5px!important;
+    line-height:1.56!important;
+  }
+  #authors .editorial-team .founder-card .mobile-editorial-summary b{
+    color:#f3c979!important;
+    font-weight:800!important;
+  }
+}
+</style>
+<script id="v18-25-mobile-founder-fuller-text-script">
+(()=>{
+  const section=document.querySelector('#authors');
+  if(!section)return;
+  const cards=section.querySelectorAll('.editorial-team .creator');
+  cards.forEach(card=>{
+    const name=card.querySelector('h3')?.textContent.trim();
+    if(name!=='Нурислам Пасяев')return;
+    const short=card.querySelector('.mobile-editorial-summary');
+    if(!short)return;
+    short.innerHTML='Основатель и автор направления проекта. Более двадцати лет создаёт проекты и сообщества: <b>«Бизнесфайл»</b>, <b>«Единая карта „Привилегия“»</b>, <b>«Инстакарта»</b> и другие — всего более десяти масштабных проектов. В «Архитекторах» он задаёт дух, смысловую рамку и направление, соединяет людей вокруг общей идеи и помогает проекту расти шире стоматологии — в пространство медицины, культуры и международного диалога.';
+  });
+})();
+</script>
