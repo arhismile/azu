@@ -4325,3 +4325,145 @@ body.edition-v13 .hero-poster.hero-video-panel,
   }
 }
 </style>
+
+<style id="v18-21-mobile-founder-and-host-cards-fix">
+/* Final mobile repair: keep Nurislam's animated portrait inside its column
+   and restore comfortable presenter photo-card proportions. */
+@media (max-width:680px){
+  /* Founder card: reserve a real portrait column instead of squeezing the coin. */
+  #authors .editorial-team .founder-card{
+    grid-template-columns:94px minmax(0,1fr)!important;
+    column-gap:15px!important;
+    align-items:center!important;
+    overflow:hidden!important;
+  }
+  #authors .editorial-team .founder-card .founder-coin{
+    position:relative!important;
+    z-index:2!important;
+    grid-column:1!important;
+    grid-row:1!important;
+    align-self:center!important;
+    justify-self:center!important;
+    width:84px!important;
+    height:84px!important;
+    min-width:84px!important;
+    margin:0!important;
+    perspective:none!important;
+    overflow:visible!important;
+  }
+  #authors .editorial-team .founder-card .founder-coin-inner{
+    width:100%!important;
+    height:100%!important;
+    transform:none!important;
+  }
+  #authors .editorial-team .founder-card .founder-coin-face{
+    inset:0!important;
+    border-width:4px!important;
+    outline-width:1px!important;
+    box-shadow:0 8px 20px rgba(0,0,0,.20)!important;
+  }
+  #authors .editorial-team .founder-card .founder-coin-face.front img{
+    animation-name:founderPortraitMoonReturnMobile!important;
+    transform-origin:50% 38%!important;
+  }
+  #authors .editorial-team .founder-card .founder-coin-face.front:before,
+  #authors .editorial-team .founder-card .founder-coin-face.front:after{
+    inset:6%!important;
+  }
+  #authors .editorial-team .founder-card .creatorcopy,
+  #authors .editorial-team .founder-card:not(.invite-editor) .creatorcopy{
+    grid-column:2!important;
+    grid-row:1!important;
+    width:100%!important;
+    min-width:0!important;
+    padding:0!important;
+    align-items:flex-start!important;
+    text-align:left!important;
+  }
+  #authors .editorial-team .founder-card h3,
+  #authors .editorial-team .founder-card .kicker,
+  #authors .editorial-team .founder-card .mobile-editorial-summary{
+    max-width:100%!important;
+    text-align:left!important;
+    overflow-wrap:break-word!important;
+  }
+
+  /* Fallback host tickets, should the broadcast carousel script not initialise. */
+  #authors .peoplegrid:not(.broadcast-source) .host-card,
+  #authors .peoplegrid .host-card{
+    flex-basis:min(320px,86vw)!important;
+  }
+  #authors .peoplegrid .host-card img{
+    width:112px!important;
+    height:112px!important;
+    margin:6px 0 15px!important;
+  }
+}
+
+/* The visible mobile presenter rail: larger portraits and readable cards. */
+@media (max-width:600px){
+  #authors .broadcast-console{
+    grid-template-columns:38px minmax(0,1fr) 38px!important;
+    gap:7px!important;
+    height:154px!important;
+  }
+  #authors .broadcast-arrow{
+    width:38px!important;
+    min-height:152px!important;
+    font-size:19px!important;
+  }
+  #authors .broadcast-rail{
+    gap:9px!important;
+    padding-bottom:5px!important;
+    scroll-snap-type:x proximity!important;
+  }
+  #authors .broadcast-thumb{
+    grid-template-rows:104px 46px!important;
+    flex:0 0 132px!important;
+    width:132px!important;
+    min-width:132px!important;
+    height:152px!important;
+    scroll-snap-align:start!important;
+  }
+  #authors .broadcast-thumb img{
+    width:100%!important;
+    height:104px!important;
+    object-fit:cover!important;
+    object-position:50% 16%!important;
+  }
+  #authors .broadcast-thumb .broadcast-thumb-caption{
+    min-height:46px!important;
+    padding:6px 8px 7px!important;
+  }
+  #authors .broadcast-thumb .broadcast-thumb-caption b{
+    font-size:9.5px!important;
+    line-height:1.1!important;
+  }
+  #authors .broadcast-thumb .broadcast-thumb-caption small{
+    margin-top:4px!important;
+    font-size:8px!important;
+    line-height:1!important;
+  }
+}
+
+@media (max-width:390px){
+  #authors .editorial-team .founder-card{
+    grid-template-columns:88px minmax(0,1fr)!important;
+    column-gap:12px!important;
+  }
+  #authors .editorial-team .founder-card .founder-coin{
+    width:78px!important;
+    height:78px!important;
+    min-width:78px!important;
+  }
+}
+
+@keyframes founderPortraitMoonReturnMobile{
+  0%,30%{opacity:1;transform:scale(1);filter:blur(0) grayscale(0) brightness(1)}
+  40%{opacity:.48;transform:scale(.985);filter:blur(1.1px) grayscale(.16) brightness(1.06)}
+  49%,66%{opacity:0;transform:scale(.93);filter:blur(5px) grayscale(.52) brightness(1.16)}
+  77%{opacity:.18;transform:scale(.955);filter:blur(3px) grayscale(.28) brightness(1.10)}
+  88%{opacity:.76;transform:scale(.99);filter:blur(.8px) grayscale(.06) brightness(1.04)}
+  96%,100%{opacity:1;transform:scale(1);filter:blur(0) grayscale(0) brightness(1)}
+}
+</style>
