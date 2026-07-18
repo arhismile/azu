@@ -37,47 +37,47 @@
     a{color:inherit;text-decoration:none}
     .page{width:min(1520px,100%);min-height:100vh;margin:auto;padding:24px clamp(16px,4vw,62px) 22px;display:flex;flex-direction:column}
     .masthead{display:flex;align-items:center;justify-content:space-between;gap:28px;padding-bottom:18px;border-bottom:1px solid #bdc8d1}
-    .brand{display:flex;align-items:center;gap:12px;color:var(--ink);font-size:11px;font-weight:800;line-height:1.08;letter-spacing:.02em}
+    .brand{display:flex;align-items:center;gap:12px;color:var(--ink);font-size:12px;font-weight:800;line-height:1.08;letter-spacing:.02em}
     .mark{position:relative;width:38px;height:38px;flex:0 0 38px;border:1.5px solid var(--blue);border-radius:50%;box-shadow:inset 0 0 0 5px #e1e7ec}
     .mark:after{content:'';position:absolute;left:13px;top:10px;border-left:12px solid var(--red);border-top:8px solid transparent;border-bottom:8px solid transparent}
-    .edition{display:flex;align-items:center;gap:12px;color:#53677a;font:700 9px/1.45 var(--mono);letter-spacing:.1em;text-transform:uppercase;text-align:right}
+    .edition{display:flex;align-items:center;gap:12px;color:#53677a;font:700 14px/1.5 var(--mono);letter-spacing:.075em;text-transform:uppercase;text-align:right}
     .edition:before{content:'';width:45px;height:3px;background:var(--red)}
 
     .intro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:40px;align-items:end;padding:clamp(36px,6vh,68px) 0 clamp(28px,5vh,48px)}
-    .kicker{margin:0 0 13px;color:var(--red);font:800 9px/1.5 var(--mono);letter-spacing:.13em;text-transform:uppercase}
+    .kicker{margin:0 0 13px;color:var(--red);font:800 14px/1.5 var(--mono);letter-spacing:.09em;text-transform:uppercase}
     h1{max-width:970px;margin:0;color:var(--ink);font-family:var(--display);font-size:clamp(58px,7.4vw,112px);font-weight:600;line-height:.76;letter-spacing:-.05em;text-wrap:balance}
     h1 em{font-style:italic;font-weight:500;color:var(--red)}
-    .intro-copy{max-width:470px;margin:0 0 2px auto;padding-left:24px;border-left:4px solid var(--red);color:#526679;font:600 11px/1.75 var(--mono)}
+    .intro-copy{max-width:540px;margin:0 0 2px auto;padding-left:24px;border-left:4px solid var(--red);color:#526679;font:600 16px/1.65 var(--mono)}
 
-    .language-heading{display:flex;align-items:center;gap:15px;margin:0 0 12px;color:#6f7c88;font:700 9px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+    .language-heading{display:flex;align-items:center;gap:15px;margin:0 0 14px;color:#6f7c88;font:700 14px/1.45 var(--mono);letter-spacing:.085em;text-transform:uppercase}
     .language-heading:after{content:'';height:1px;flex:1;background:#bdc8d1}
     .covers{display:grid;grid-template-columns:1fr 1fr;gap:18px}
     .cover-link{position:relative;display:block;min-width:0;background:#fff;border:1px solid #cbd3da;box-shadow:0 20px 52px rgba(23,43,73,.11);transition:transform .38s cubic-bezier(.22,1,.36,1),box-shadow .38s ease,border-color .3s ease}
     .cover-link:hover,.cover-link:focus-visible{transform:translateY(-8px);border-color:var(--blue);box-shadow:0 30px 72px rgba(23,43,73,.23);outline:none}
     .cover-link.is-preferred{border-color:var(--red);box-shadow:0 20px 52px rgba(216,38,60,.14)}
-    .cover-link.is-preferred:before{content:'Ваш прошлый выбор · Lựa chọn gần đây';position:absolute;z-index:4;right:14px;top:14px;padding:8px 10px;background:#fff;color:var(--red);font:800 7px/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase}
+    .cover-link.is-preferred:before{content:'Ваш прошлый выбор · Lựa chọn gần đây';position:absolute;z-index:4;right:14px;top:14px;padding:9px 11px;background:#fff;color:var(--red);font:800 11px/1.35 var(--mono);letter-spacing:.035em;text-transform:uppercase}
     .issue-photo{position:relative;aspect-ratio:16/9;overflow:hidden;background:#dfe4e8}
     .issue-photo img{display:block;width:100%;height:100%;object-fit:cover;filter:saturate(.88) contrast(1.02);transition:transform .7s cubic-bezier(.22,1,.36,1),filter .5s ease}
     .cover-link:hover .issue-photo img,.cover-link:focus-visible .issue-photo img{transform:scale(1.035);filter:saturate(1) contrast(1.03)}
     .issue-photo:after{content:'';position:absolute;inset:0;border:10px solid rgba(255,255,255,.17);pointer-events:none}
-    .cover-caption{display:grid;grid-template-columns:54px minmax(0,1fr) 52px;gap:15px;align-items:center;min-height:118px;padding:18px 20px;background:#fff}
-    .cover-number{align-self:start;padding-top:5px;color:var(--red);font:800 10px/1 var(--mono)}
-    .cover-copy small{display:block;margin-bottom:6px;color:#6c7a88;font:700 8px/1.45 var(--mono);letter-spacing:.12em;text-transform:uppercase}
+    .cover-caption{display:grid;grid-template-columns:54px minmax(0,1fr) 52px;gap:15px;align-items:center;min-height:132px;padding:20px;background:#fff}
+    .cover-number{align-self:start;padding-top:5px;color:var(--red);font:800 14px/1 var(--mono)}
+    .cover-copy small{display:block;margin-bottom:7px;color:#6c7a88;font:700 12px/1.5 var(--mono);letter-spacing:.085em;text-transform:uppercase}
     .cover-copy b{display:block;color:var(--ink);font-family:var(--display);font-size:clamp(28px,3vw,46px);font-weight:600;line-height:.9;letter-spacing:-.045em}
-    .cover-copy span{display:block;margin-top:9px;color:#627284;font:600 9px/1.45 var(--mono)}
+    .cover-copy span{display:block;margin-top:10px;color:#627284;font:600 14px/1.55 var(--mono)}
     .cover-arrow{display:grid;place-items:center;width:46px;height:46px;border:1px solid #b6c1ca;border-radius:50%;color:var(--blue);font-size:22px;transition:transform .32s ease,background .32s ease,color .32s ease}
     .cover-link:hover .cover-arrow,.cover-link:focus-visible .cover-arrow{transform:rotate(45deg);background:var(--blue);color:#fff}
-    .note{display:flex;justify-content:space-between;gap:22px;margin:17px 0 0;color:#73808c;font:600 8px/1.55 var(--mono)}
+    .note{display:flex;justify-content:space-between;gap:22px;margin:18px 0 0;color:#687785;font:600 12px/1.6 var(--mono)}
     .note b{color:var(--red)}
-    footer{display:flex;justify-content:space-between;gap:20px;margin-top:auto;padding-top:26px;color:#74818d;font:600 8px/1.5 var(--mono);letter-spacing:.04em}
+    footer{display:flex;justify-content:space-between;gap:20px;margin-top:auto;padding-top:26px;color:#687785;font:600 12px/1.55 var(--mono);letter-spacing:.025em}
     @media(max-width:900px){.intro{grid-template-columns:1fr}.intro-copy{max-width:680px;margin:0;padding-left:18px}.covers{grid-template-columns:1fr}.issue-photo{aspect-ratio:16/8.8}}
     @media(max-width:600px){
-      .page{padding:17px 12px}.edition{font-size:0}.edition:after{content:'RU · VN';font-size:9px}.edition:before{width:25px}
-      .intro{padding:42px 0 29px;gap:26px}.kicker{font-size:7.5px}h1{font-size:clamp(57px,17vw,80px);line-height:.79}.intro-copy{font-size:9.5px}
-      .covers{gap:14px}.issue-photo{aspect-ratio:16/9}.cover-caption{grid-template-columns:34px minmax(0,1fr) 42px;min-height:105px;padding:15px 13px;gap:9px}.cover-copy b{font-size:31px}.cover-copy span{font-size:8px}.cover-arrow{width:39px;height:39px}
+      .page{padding:17px 12px}.edition{font-size:0}.edition:after{content:'RU · VN';font-size:12px}.edition:before{width:25px}
+      .intro{padding:42px 0 29px;gap:26px}.kicker{font-size:12px}h1{font-size:clamp(57px,17vw,80px);line-height:.79}.intro-copy{font-size:15px;line-height:1.6}
+      .covers{gap:14px}.issue-photo{aspect-ratio:16/9}.cover-caption{grid-template-columns:34px minmax(0,1fr) 42px;min-height:126px;padding:17px 13px;gap:9px}.cover-number{font-size:13px}.cover-copy small{font-size:11px}.cover-copy b{font-size:31px}.cover-copy span{font-size:13px}.cover-arrow{width:39px;height:39px}
       .note{display:block}.note span{display:block;margin-top:5px}footer{display:block;text-align:center}footer span{display:block;margin-top:6px}
     }
-    @media(max-width:380px){.brand{font-size:9px}.mark{width:34px;height:34px;flex-basis:34px}.mark:after{left:11px;top:8px}h1{font-size:55px}.cover-copy b{font-size:27px}}
+    @media(max-width:380px){.brand{font-size:10px}.mark{width:34px;height:34px;flex-basis:34px}.mark:after{left:11px;top:8px}h1{font-size:55px}.cover-copy b{font-size:27px}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition:none!important}}
   </style>
 </head>
