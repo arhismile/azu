@@ -13,7 +13,7 @@
 <link rel="alternate" hreflang="ru" href="https://arhismile.github.io/azu/">
 <link rel="alternate" hreflang="vi" href="https://arhismile.github.io/vn/">
 <link rel="alternate" hreflang="x-default" href="https://arhismile.github.io/">
-<meta property="og:image" content="https://i.ytimg.com/vi/ufOtpCFCsH4/maxresdefault.jpg">
+<meta property="og:image" content="https://i.ytimg.com/vi/XlOVOtyz32Y/maxresdefault.jpg">
 <meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23173e70'/%3E%3Cpath d='M26 20l20 12-20 12z' fill='%23fff'/%3E%3C/svg%3E">
@@ -390,14 +390,14 @@ body.edition-v13 .hero-poster.hero-video-panel,
   const panel=document.querySelector('.poster-hero .hero-video-panel');
   if(!panel)return;
   const coverHTML=panel.innerHTML;
-  const title='Клиника на твоих плечах. Наталья Шурова и Павел Манапов';
+  const title='Дважды спасённая донорской кровью. Мария Иванова';
 
   const bindCover=()=>{
     const cover=panel.querySelector('.hero-premiere-poster');
     if(!cover)return;
     const openVideo=()=>{
       panel.classList.add('is-playing');
-      panel.innerHTML='<div class="hero-inline-player hero-player-active"><iframe src="https://www.youtube-nocookie.com/embed/2UDU41NO6fU?autoplay=1&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" title="'+title+'" allow="autoplay; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><div class="hero-video-caption"><span>Сейчас в эфире</span><button type="button" class="hero-restore-cover">← Вернуться к обложке</button></div></div>';
+      panel.innerHTML='<div class="hero-inline-player hero-player-active"><iframe src="https://www.youtube-nocookie.com/embed/XlOVOtyz32Y?autoplay=1&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" title="'+title+'" allow="autoplay; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><div class="hero-video-caption"><span>Сейчас в эфире</span><button type="button" class="hero-restore-cover">← Вернуться к обложке</button></div></div>';
       panel.querySelector('.hero-restore-cover')?.addEventListener('click',restoreCover);
     };
     cover.addEventListener('click',openVideo);
@@ -501,22 +501,41 @@ body.edition-v13 .hero-poster.hero-video-panel,
 }
 </style>
 
+<style id="maria-episode-support-credit">
+.poster-hero .episode-support-credit,
+#historyGrid .episode-support-credit{
+  display:block;
+  margin-top:14px;
+  color:#526578;
+  font-family:var(--mono);
+  font-size:13px;
+  font-weight:500;
+  line-height:1.5;
+  letter-spacing:.01em;
+}
+#historyGrid .episode-support-credit{
+  margin-top:12px;
+  padding-top:10px;
+  border-top:1px solid rgba(23,62,112,.16);
+  font-size:12px;
+}
+</style>
 </head>
 <body>
 <header class="top"><div class="wrap topin"><a class="brand" href="#top"><span class="mark"></span><span>АРХИТЕКТОРЫ<br>ЗДОРОВОЙ УЛЫБКИ</span></a><nav class="nav"><a href="#top">Эфир</a><a href="#fresh">Премьеры</a><a href="#all">Все выпуски</a><a href="#authors">Ведущие</a><a href="#patrons">Меценаты</a></nav><a class="write" href="mailto:moskow.hd@gmail.com">Написать в редакцию</a></div></header>
 <main id="top">
 <section class="hero poster-hero"><div class="hero-poster hero-video-panel">
-  <div class="hero-premiere-poster" role="button" tabindex="0" aria-label="Смотреть новый выпуск «Сколько стоят ваши принципы?»">
+  <div class="hero-premiere-poster" role="button" tabindex="0" aria-label="Смотреть новый выпуск «Дважды спасённая донорской кровью»">
     <div class="hero-premiere-art">
-      <img src="https://i.ytimg.com/vi/ufOtpCFCsH4/maxresdefault.jpg" alt="Сколько стоят ваши принципы? — Лиана Давидян" fetchpriority="high">
+      <img src="https://i.ytimg.com/vi/XlOVOtyz32Y/maxresdefault.jpg" alt="Дважды спасённая донорской кровью — Мария Иванова" fetchpriority="high">
       <span class="hero-premiere-badge">🍁 Новый выпуск</span>
     </div>
     <div class="hero-premiere-caption">
-      <div><strong>Новый выпуск</strong><span>Лиана Давидян</span></div>
+      <div><strong>Новый выпуск</strong><span>Мария Иванова</span></div>
       <b>Смотреть выпуск →</b>
     </div>
   </div>
-</div><div class="wrap"><div class="hero-copy"><div><div class="livebadge"><i></i> Новый выпуск</div><div class="kicker">🍁 18 сентября 2026 · Премьера</div><h1>Сколько стоят ваши принципы?</h1><p class="hero-names">Лиана Давидян</p><p class="lead">Сооснователь AVRORA CLINIC — о принципах, за которые приходится платить, и о цене решений, которые определяют репутацию и путь.</p></div><div class="heroactions"><button class="heroplay story" data-id="ufOtpCFCsH4"><span>▶</span> Смотреть выпуск</button><a class="aboutshow" href="#all">Все выпуски →</a></div></div><div class="herofoot"><span>Просветительский видеоканал · Россия · международные разговоры</span><a class="scroll" href="#fresh">Дальше в эфире ↓</a></div></div></section>
+</div><div class="wrap"><div class="hero-copy"><div><div class="livebadge"><i></i> Новый выпуск</div><div class="kicker">🍁 Премьера</div><h1>Дважды спасённая донорской кровью</h1><p class="hero-names">Мария Иванова</p><p class="lead">Разговор с Марией Ивановой о донорстве, медицине и её истории жизни.</p><div class="episode-support-credit">При поддержке Артура Политова</div></div><div class="heroactions"><button class="heroplay story" data-id="XlOVOtyz32Y"><span>▶</span> Смотреть выпуск</button><a class="aboutshow" href="#all">Все выпуски →</a></div></div><div class="herofoot"><span>Просветительский видеоканал · Россия · международные разговоры</span><a class="scroll" href="#fresh">Дальше в эфире ↓</a></div></div></section>
 <section class="section" id="fresh"><div class="wrap"><div class="sectionhead"><div><div class="kicker">Премьеры</div><h2>Сейчас смотрят</h2></div><p>Новые разговоры о здоровье, профессии, отношениях и человеческом опыте.</p></div><div class="featuregrid" id="featured"></div></div></section>
 <div id="themes" hidden aria-hidden="true"><div class="showformats"></div><div id="themeGrid"></div></div>
 <section class="section archive" id="all"><div class="wrap"><div class="sectionhead"><div><div class="kicker">Видеоархив канала</div><h2>Все выпуски</h2></div><p>Интервью, «Треугольники», лекции и специальные проекты в одном месте.</p></div><div class="archivebar"><input class="search" id="search" placeholder="Найти выпуск, тему или ведущего"><span class="result" id="result"></span></div><div class="archivegrid" id="archive"></div><button class="more" id="more">Показать ещё выпуски</button></div></section>
@@ -566,7 +585,7 @@ body.edition-v13 .hero-poster.hero-video-panel,
         <div class="eyebrow">Архив историй</div>
         <h2>Уже два года в эфире</h2>
         <p>За это время мы встречались с врачами, исследователями, руководителями и авторами идей. Говорили о здоровье, выборе, профессии, отношениях и человеческом опыте. Здесь можно увидеть, что мы уже изучали, обсуждали и делали вместе.</p>
-        <div class="history-facts"><div><b>69</b><span>выпусков в архиве</span></div><div><b>2 года</b><span>живых разговоров</span></div><div><b>1 архив</b><span>к которому можно возвращаться</span></div></div>
+        <div class="history-facts"><div><b>73</b><span>выпусков в архиве</span></div><div><b>2 года</b><span>живых разговоров</span></div><div><b>1 архив</b><span>к которому можно возвращаться</span></div></div>
       </div>
       <div class="history-image history-video-embed">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/1oJ_yFcp5IU?si=ZikXtlpIwAR3Dahb" title="Нос, язык, митохондрии и рост кости" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -574,7 +593,7 @@ body.edition-v13 .hero-poster.hero-video-panel,
     </div>
     <div class="history-list-head"><h3>Библиотека затронутых тем</h3><p>Листайте архив свободно. Здесь нет деления на громкие направления: каждый разговор остаётся частью общей истории проекта.</p></div>
     <div class="history-controls" aria-label="Листать архив"><button class="history-arrow" id="historyPrev" type="button" aria-label="Предыдущие выпуски">←</button><button class="history-arrow" id="historyNext" type="button" aria-label="Следующие выпуски">→</button></div>
-    <div class="history-grid" id="historyGrid"><article class="history-card story" data-id="ufOtpCFCsH4"><div class="history-thumb"><img loading="lazy" data-yt-id="ufOtpCFCsH4" src="https://i.ytimg.com/vi/ufOtpCFCsH4/maxresdefault.jpg" alt="Сколько стоят ваши принципы? — Лиана Давидян"><span class="history-play">▶</span></div><div class="history-copy"><span>Премьера</span><h3>Сколько стоят ваши принципы?</h3><p>Лиана Давидян · Ереван · Москва</p></div></article><article class="history-card story" data-id="aggxfWfVIRQ"><div class="history-thumb"><img loading="lazy" data-yt-id="aggxfWfVIRQ" src="https://i.ytimg.com/vi/aggxfWfVIRQ/maxresdefault.jpg" alt="Как устроена детская медицина будущего — Валерия Солок"><span class="history-play">▶</span></div><div class="history-copy"><span>Прошлый выпуск</span><h3>Как устроена детская медицина будущего</h3><p>Валерия Солок · Москва</p></div></article><article class="history-card story" data-id="5ndjjaYyxUQ"><div class="history-thumb"><img loading="lazy" data-yt-id="5ndjjaYyxUQ" src="https://i.ytimg.com/vi/5ndjjaYyxUQ/maxresdefault.jpg" alt="Оксана Ермилова: имплантация, выбор врача и сложная медицина"><span class="history-play">▶</span></div><div class="history-copy"><span>Недавний выпуск</span><h3>Оксана Ермилова: имплантация, выбор врача и сложная медицина</h3><p>Оксана Ермилова · Михайловка</p></div></article><article class="history-card story" data-id="2UDU41NO6fU">
+    <div class="history-grid" id="historyGrid"><article class="history-card story is-visible" data-id="XlOVOtyz32Y"><div class="history-thumb"><img loading="lazy" data-yt-id="XlOVOtyz32Y" src="https://i.ytimg.com/vi/XlOVOtyz32Y/maxresdefault.jpg" alt="Дважды спасённая донорской кровью — Мария Иванова"><span class="history-play">▶</span></div><div class="history-copy"><span>Премьера</span><h3>Дважды спасённая донорской кровью</h3><p>Мария Иванова · ПреАмбула</p><div class="episode-support-credit">При поддержке Артура Политова</div></div></article><article class="history-card story" data-id="ufOtpCFCsH4"><div class="history-thumb"><img loading="lazy" data-yt-id="ufOtpCFCsH4" src="https://i.ytimg.com/vi/ufOtpCFCsH4/maxresdefault.jpg" alt="Сколько стоят ваши принципы? — Лиана Давидян"><span class="history-play">▶</span></div><div class="history-copy"><span>Прошлый выпуск</span><h3>Сколько стоят ваши принципы?</h3><p>Лиана Давидян · Ереван · Москва</p></div></article><article class="history-card story" data-id="aggxfWfVIRQ"><div class="history-thumb"><img loading="lazy" data-yt-id="aggxfWfVIRQ" src="https://i.ytimg.com/vi/aggxfWfVIRQ/maxresdefault.jpg" alt="Как устроена детская медицина будущего — Валерия Солок"><span class="history-play">▶</span></div><div class="history-copy"><span>Выпуск из архива</span><h3>Как устроена детская медицина будущего</h3><p>Валерия Солок · Москва</p></div></article><article class="history-card story" data-id="5ndjjaYyxUQ"><div class="history-thumb"><img loading="lazy" data-yt-id="5ndjjaYyxUQ" src="https://i.ytimg.com/vi/5ndjjaYyxUQ/maxresdefault.jpg" alt="Оксана Ермилова: имплантация, выбор врача и сложная медицина"><span class="history-play">▶</span></div><div class="history-copy"><span>Недавний выпуск</span><h3>Оксана Ермилова: имплантация, выбор врача и сложная медицина</h3><p>Оксана Ермилова · Михайловка</p></div></article><article class="history-card story" data-id="2UDU41NO6fU">
       <div class="history-thumb"><img loading="lazy" data-yt-id="2UDU41NO6fU" src="https://i.ytimg.com/vi/2UDU41NO6fU/maxresdefault.jpg" alt="Клиника на твоих плечах"><span class="history-play">▶</span></div>
       <div class="history-copy"><span>Выпуск от 27 июля 2026</span><h3>Клиника на твоих плечах</h3><p>Наталья Шурова и Павел Манапов</p></div>
     </article><article class="history-card story" data-id="chS5DrXX_-0">
@@ -1245,6 +1264,7 @@ body.edition-v13 .hero-poster.hero-video-panel,
 <div class="modal" id="modal"><div class="modalbox"><button class="close" aria-label="Закрыть">×</button><iframe id="player" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div></div>
 <script>
 const curated=[
+['XlOVOtyz32Y','Дважды спасённая донорской кровью','Мария Иванова · ПреАмбула','Донорство и медицина'],
 ['ufOtpCFCsH4','Сколько стоят ваши принципы?','Лиана Давидян · Ереван · Москва','Личный опыт'],
 ['aggxfWfVIRQ','Как устроена детская медицина будущего','Валерия Солок · Москва','Врач и человек'],
 ['2UDU41NO6fU','Клиника на твоих плечах','Наталья Шурова и Павел Манапов','Врач и человек'],
@@ -1354,7 +1374,7 @@ const heroPoster=document.querySelector('.hero-poster');
 const heroPosterHTML=heroPoster.innerHTML;
 heroWatch.addEventListener('click',e=>{
   e.preventDefault();e.stopPropagation();
-  heroPoster.innerHTML='<div class="hero-inline-player"><iframe src="https://www.youtube-nocookie.com/embed/ufOtpCFCsH4?autoplay=1&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" title="Сколько стоят ваши принципы? Лиана Давидян" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><button type="button" class="restore-poster">← Вернуться к обложке</button></div>';
+  heroPoster.innerHTML='<div class="hero-inline-player"><iframe src="https://www.youtube-nocookie.com/embed/XlOVOtyz32Y?autoplay=1&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" title="Дважды спасённая донорской кровью Мария Иванова" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><button type="button" class="restore-poster">← Вернуться к обложке</button></div>';
   heroPoster.querySelector('.restore-poster').addEventListener('click',()=>{heroPoster.innerHTML=heroPosterHTML;});
   heroPoster.scrollIntoView({behavior:'smooth',block:'start'});
 });
@@ -4464,9 +4484,9 @@ body.edition-v13 .hero-poster.hero-video-panel,
 <nav class="language-switcher" aria-label="Выбор языка"><a class="language-home" href="https://arhismile.github.io/" title="Выбрать язык" aria-label="Открыть страницу выбора языка">◎</a><a class="active" href="https://arhismile.github.io/azu/" lang="ru" aria-current="page">RU</a><a href="https://arhismile.github.io/vn/" lang="vi" title="Tiếng Việt">VN</a></nav>
 <script id="v18-29-new-premiere">
 (()=>{
-  const id='ufOtpCFCsH4';
-  const title='Сколько стоят ваши принципы?';
-  const person='Лиана Давидян';
+  const id='XlOVOtyz32Y';
+  const title='Дважды спасённая донорской кровью';
+  const person='Мария Иванова';
   const panel=document.querySelector('.poster-hero .hero-video-panel');
 
   if(panel){
@@ -4492,13 +4512,13 @@ body.edition-v13 .hero-poster.hero-video-panel,
     const live=hero.querySelector('.livebadge');
     if(live)live.innerHTML='<i></i> Новый выпуск';
     const kicker=hero.querySelector('.hero-copy .kicker');
-    if(kicker)kicker.textContent='18 сентября 2026 · Премьера';
+    if(kicker)kicker.textContent='Премьера';
     const heading=hero.querySelector('.hero-copy h1');
     if(heading)heading.textContent=title;
     const names=hero.querySelector('.hero-names');
     if(names)names.textContent=person;
     const lead=hero.querySelector('.lead');
-    if(lead)lead.textContent='Сооснователь AVRORA CLINIC — о принципах, за которые приходится платить, и о цене решений, которые определяют репутацию и путь.';
+    if(lead)lead.textContent='Разговор с Марией Ивановой о донорстве, медицине и её истории жизни.';
     const oldButton=hero.querySelector('.heroplay');
     if(oldButton){
       const button=oldButton.cloneNode(true);
