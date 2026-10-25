@@ -687,6 +687,38 @@ body.edition-v13 .hero-poster.hero-video-panel,
   #top .poster-hero .herofoot{gap:8px!important}
 }
 </style>
+
+<style id="v18-30-premiere-badge-in-caption">
+/* The premiere label belongs under the video instead of covering its thumbnail. */
+#top .poster-hero .hero-premiere-caption .hero-premiere-badge{
+  display:inline-flex!important;
+  position:static!important;
+  inset:auto!important;
+  top:auto!important;
+  right:auto!important;
+  bottom:auto!important;
+  left:auto!important;
+  width:max-content!important;
+  max-width:100%!important;
+  margin:0 0 9px!important;
+  padding:5px 9px!important;
+  background:#f9e9ed!important;
+  color:#b91f34!important;
+  border-left:3px solid #d8263c!important;
+  border-radius:2px!important;
+  box-shadow:none!important;
+  font:800 10px/1.2 var(--mono)!important;
+  letter-spacing:.05em!important;
+  text-transform:uppercase!important;
+}
+@media(max-width:680px){
+  #top .poster-hero .hero-premiere-caption .hero-premiere-badge{
+    display:inline-flex!important;
+    margin-bottom:7px!important;
+    font-size:9px!important;
+  }
+}
+</style>
 </head>
 <body>
 <header class="top"><div class="wrap topin"><a class="brand" href="#top"><span class="mark"></span><span>АРХИТЕКТОРЫ<br>ЗДОРОВОЙ УЛЫБКИ</span></a><nav class="nav"><a href="#top">Эфир</a><a href="#fresh">Премьеры</a><a href="#all">Все выпуски</a><a href="#authors">Ведущие</a><a href="#patrons">Меценаты</a></nav><a class="write" href="https://vk.ru/valentina_inkina" target="_blank" rel="noopener noreferrer">Написать в редакцию</a></div></header>
@@ -695,10 +727,9 @@ body.edition-v13 .hero-poster.hero-video-panel,
   <div class="hero-premiere-poster" role="button" tabindex="0" aria-label="Смотреть новый выпуск «Новый выпуск с Натальей Шуровой»">
     <div class="hero-premiere-art">
       <img data-yt-id="36z5d2Ud6l4" src="https://i.ytimg.com/vi/36z5d2Ud6l4/maxresdefault.jpg" alt="Новый выпуск с Натальей Шуровой — Наталья Шурова" fetchpriority="high">
-      <span class="hero-premiere-badge">🍁 Новый выпуск</span>
     </div>
     <div class="hero-premiere-caption">
-      <div><strong>Новый выпуск с Натальей Шуровой</strong><span>Наталья Шурова</span></div>
+      <div><span class="hero-premiere-badge">Новый выпуск</span><strong>Новый выпуск с Натальей Шуровой</strong><span>Наталья Шурова</span></div>
       <b>Смотреть выпуск →</b>
     </div>
   </div>
@@ -4397,7 +4428,7 @@ body.edition-v13 .hero-poster.hero-video-panel,
   if(panel){
     const renderCover=()=>{
       panel.classList.remove('is-playing');
-      panel.innerHTML='<div class="hero-premiere-poster" role="button" tabindex="0" aria-label="Смотреть новый выпуск «'+title+'»"><div class="hero-premiere-art"><img data-yt-id="'+id+'" src="https://i.ytimg.com/vi/'+id+'/maxresdefault.jpg" alt="'+title+'" fetchpriority="high"><span class="hero-premiere-badge">🍁 Новый выпуск</span></div><div class="hero-premiere-caption"><div><strong>'+title+'</strong><span>'+person+'</span></div><b>Смотреть выпуск →</b></div></div>';
+      panel.innerHTML='<div class="hero-premiere-poster" role="button" tabindex="0" aria-label="Смотреть новый выпуск «'+title+'»"><div class="hero-premiere-art"><img data-yt-id="'+id+'" src="https://i.ytimg.com/vi/'+id+'/maxresdefault.jpg" alt="'+title+'" fetchpriority="high"></div><div class="hero-premiere-caption"><div><span class="hero-premiere-badge">Новый выпуск</span><strong>'+title+'</strong><span>'+person+'</span></div><b>Смотреть выпуск →</b></div></div>';
       upgradeYouTubeThumbs(panel);
       const cover=panel.querySelector('.hero-premiere-poster');
       const openVideo=()=>{
